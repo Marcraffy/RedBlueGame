@@ -1,0 +1,10 @@
+I:\Projects\RedBlueGame\obj\Debug\netcoreapp2.0\RedBlueGame.csproj.CoreCompileInputs.cache
+I:\Projects\RedBlueGame\obj\Debug\netcoreapp2.0\RedBlueGame.AssemblyInfoInputs.cache
+I:\Projects\RedBlueGame\obj\Debug\netcoreapp2.0\RedBlueGame.AssemblyInfo.cs
+I:\Projects\RedBlueGame\bin\Debug\netcoreapp2.0\RedBlueGame.deps.json
+I:\Projects\RedBlueGame\bin\Debug\netcoreapp2.0\RedBlueGame.runtimeconfig.json
+I:\Projects\RedBlueGame\bin\Debug\netcoreapp2.0\RedBlueGame.runtimeconfig.dev.json
+I:\Projects\RedBlueGame\bin\Debug\netcoreapp2.0\RedBlueGame.dll
+I:\Projects\RedBlueGame\bin\Debug\netcoreapp2.0\RedBlueGame.pdb
+I:\Projects\RedBlueGame\obj\Debug\netcoreapp2.0\RedBlueGame.dll
+I:\Projects\RedBlueGame\obj\Debug\netcoreapp2.0\RedBlueGame.pdb
