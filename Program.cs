@@ -11,12 +11,21 @@ namespace RedBlueGame
         public static void Main()
         {
             var test = @"I:\Projects\RedBluePlayer\bin\Debug\netcoreapp2.0\RedBluePlayer.dll";
-            var game = new RedBlueGame(getPlayers(test, test), 2);
-            Play(game);
+            try
+            {
+                var game = new RedBlueGame(getPlayers(test, test), 2);
+                play(game);
+            }
+            catch (System.Reflection.ReflectionTypeLoadException exception)
+            {
+                Console.WriteLine("Assembly Load Failure!");
+                throw exception;
+            }
         }
 
-        private static void Play(RedBlueGame game)
+        private static void play(RedBlueGame game)
         {
+            Console.WriteLine($"1 2");
             while (game.State != Game.Over)
             {
                 game.Play();

@@ -1,4 +1,3 @@
-
 using RedBlueGame.Interfaces;
 
 namespace RedBlueGame
