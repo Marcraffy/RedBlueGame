@@ -26,8 +26,8 @@ namespace RedBlueGame
         public void Play()
         {
             muteConsole(() => {
-                history[turn, 0] = player.One.PlayFrom(stateFor(Enums.Player.One));
-                history[turn, 1] = player.Two.PlayFrom(stateFor(Enums.Player.Two));
+                history[turn, 0] = player.One.PlayFrom(stateFor(Enums.Player.One), stateFor(Enums.Player.Two));
+                history[turn, 1] = player.Two.PlayFrom(stateFor(Enums.Player.Two), stateFor(Enums.Player.One));
             });
 
             if(turn < maxTurns)
@@ -54,6 +54,9 @@ namespace RedBlueGame
             return score;
         }
 
+        public bool[] GetLastAction() =>
+            new bool[2] { history[turn - 1, 0], history[turn - 1, 1] };
+
         private int[] score(bool playerOneChoice, bool playerTwoChoice) 
         {
             if (playerOneChoice && playerTwoChoice)
@@ -74,16 +77,14 @@ namespace RedBlueGame
             }
         }
 
-        private bool[,] stateFor(Enums.Player player)
+        private bool[] stateFor(Enums.Player player)
         {
-            var playerState         = new bool[turn, 2];
+            var playerState         = new bool[turn];
             var playersPosition     = player == Enums.Player.One ? 0 : 1;
-            var opponentsPosition   = player == Enums.Player.One ? 1 : 0;
 
             for (int index = 0; index < turn; index++)
             {
-                playerState[index, 0] = history[index, playersPosition];
-                playerState[index, 1] = history[index, opponentsPosition];
+                playerState[index] = history[index, playersPosition];
             }
 
             return playerState;
